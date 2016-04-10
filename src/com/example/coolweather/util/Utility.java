@@ -91,9 +91,13 @@ public class Utility {
 		try {
 			JSONObject jsonObject = new JSONObject(response);
 			JSONObject weatherInfo = jsonObject.getJSONObject("weatherinfo");
+			System.out.println(weatherInfo.toString());
 			String cityName = weatherInfo.getString("city");
-			String weatherCode = weatherInfo.getString("cityId");
+			System.out.println(cityName);
+			String weatherCode = weatherInfo.getString("cityid");
+			System.out.println(weatherCode);
 			String temp1 = weatherInfo.getString("temp1");
+			System.out.println(temp1);
 			String temp2 = weatherInfo.getString("temp2");
 			String weatherDesp = weatherInfo.getString("weather");
 			String publishTime = weatherInfo.getString("ptime");
